@@ -44,4 +44,8 @@ class MusicLibraryController
       songs.each_with_index{|song, index| puts "#{index + 1}. #{song.name} - #{song.genre.name}"}
     end
   end 
+  
+  def list_songs_by_genre
+    puts "Please enter the genre:"
+  end 
 end 
