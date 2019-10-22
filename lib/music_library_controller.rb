@@ -39,7 +39,9 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     user_input = gets.chomp
     artist = Artist.find_by_name(user_input)
-    songs = artist.songs.sort{|song1, song2| song1.name <=> song2.name}
-    songs.each_with_index{|song, index| puts "#{index + 1}"}
+    if artist 
+      songs = artist.songs.sort{|song1, song2| song1.name <=> song2.name}
+      songs.each_with_index{|song, index| puts "#{index + 1}"}
+    end
   end 
 end 
