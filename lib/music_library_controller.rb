@@ -60,7 +60,7 @@ class MusicLibraryController
     user_input = gets.chomp
     if user_input.to_i > 0 && user_input.to_i < Song.all.count
       sorted = Song.all.sort{|song1, song2| song1.name <=> song2.name}
-      puts "Playing #{Song.all[user_input.to_i - 1].name} by #{Song.all[user_input.to_i - 1].artist.name}"
+      puts "Playing #{sorted[user_input.to_i - 1].name} by #{sorted[user_input.to_i - 1].artist.name}"
     end
   end 
 end 
