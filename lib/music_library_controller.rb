@@ -59,7 +59,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     user_input = gets.chomp
     if user_input.to_i > 0 && user_input.to_i < Song.all.count
-      puts "Playing #{Song.all[user_input.to_i].name} by #{Song.all[user_input.to_i].artist.name}"
+      puts "Playing #{Song.all[user_input.to_i - 1].name} by #{Song.all[user_input.to_i - 1].artist.name}"
     end
   end 
 end 
